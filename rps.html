@@ -13,7 +13,48 @@
 </head>
 
 <body>
-  <script></script>
+  <script>
+      function computerPlay(){
+          let choices = ["Paper","Rock","Scissors"];
+          let randomChoice = choices[Math.floor(Math.random()*choices.length)];
+          return randomChoice;
+      }
+      computerSelection = computerPlay();
+
+      function Game(playerSelection,computerSelection){
+          ps = playerSelection.toLowerCase();
+          cs = computerSelection.toLowerCase();
+            
+          if (ps == "rock" && cs == "scissors" ){
+              return "Computer loses! Rock Beats Scissors!"
+          };
+          if (ps == "rock" && cs == "rock" ){
+              return "Tie"
+          };
+          if (ps == "rock" && cs == "paper" ){
+              return "Computer wins, paper beats rock!"
+          };
+          if (ps == "paper" && cs == "scissors" ){
+              return "Computer wins, scissors beat paper!"
+          };
+          if (ps == "paper" && cs == "rock" ){
+              return "Computer loses! Paper beats rock!"
+          };
+          if (ps == "paper" && cs == "paper" ){
+              return "Tie!"
+          };
+          if (ps == "scissors" && cs == "scissors" ){
+              return "Tie"
+          };
+          if (ps == "scissors" && cs == "rock" ){
+              return "Computer wins! rock beast scissors"
+          };
+          if (ps == "scissors" && cs == "paper" ){
+              return "You win! Scissors beats paper"
+          };
+      }
+
+  </script>
 </body>
 </html>
 
